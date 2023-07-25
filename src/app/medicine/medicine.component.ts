@@ -11,8 +11,7 @@ import { MedicineService } from './services/medicine.service';
 
 export class MedicineComponent implements OnInit {
   medicine : Medicine[] = [];
-  success : string = '';
-  error : string = '' ;
+  status : string = '';
 
   constructor(private medicineService : MedicineService) { };
   
@@ -24,11 +23,11 @@ export class MedicineComponent implements OnInit {
     this.medicineService.getMedicine().subscribe(
       (data: Medicine[]) => {
         this.medicine = data;
-        this.success = 'successful retrieval of the list';
-        console.log(this.success);
+        this.status = 'successful retrieval of the list';
+        console.log(this.status);
       },
       (err) => {
-        this.error = err;
+        this.status = err;
         console.log(err);
       }
     );

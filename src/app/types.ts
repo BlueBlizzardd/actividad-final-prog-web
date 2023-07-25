@@ -10,8 +10,8 @@ export interface Batch {
     id: number,
     receiptNum: number,
     batchDate: Date,
-    amount: number,
     medicine: string,
-    employee: string,
+    amount: number,
     provider: string,
+    employee: string,  
 }

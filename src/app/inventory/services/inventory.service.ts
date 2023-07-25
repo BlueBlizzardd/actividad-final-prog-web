@@ -1,23 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
+import { map } from 'rxjs';
 
-let url : string = 'http://localhost:80/api/selectMedicine';
+let url : string = 'http://localhost:80/api/selectBatch';
 
 @Injectable({
   providedIn: 'root'
 })
-
-export class MedicineService { 
+export class InventoryService {
 
   constructor(private http : HttpClient) { }
 
-  getMedicine() {
+  getBatch() {
     return this.http.get(url).pipe(
       map((res : any) => {
         return res;
       })
     );
-  }
-
+  };
 }
