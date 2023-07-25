@@ -64,7 +64,8 @@
               "browserTarget": "progweb5:build:production"
             },
             "development": {
-              "browserTarget": "progweb5:build:development"
+              "browserTarget": "progweb5:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

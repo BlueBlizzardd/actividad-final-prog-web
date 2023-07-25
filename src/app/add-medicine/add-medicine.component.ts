@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Medicine } from '../types';
 
 @Component({
   selector: 'app-add-medicine',
