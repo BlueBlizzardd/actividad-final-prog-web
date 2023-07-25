@@ -3,14 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { InventoryComponent } from './inventory/inventory.component';
+import { MedicineComponent } from './medicine/medicine.component';
+import { AddMedicineComponent } from './add-medicine/add-medicine.component';
+import { AddInventoryComponent } from './add-inventory/add-inventory.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InventoryComponent,
+    MedicineComponent,
+    AddMedicineComponent,
+    AddInventoryComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
