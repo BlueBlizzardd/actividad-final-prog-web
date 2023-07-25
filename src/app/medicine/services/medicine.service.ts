@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 
+let url : string = 'http://localhost:80/selectMedicine';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +13,7 @@ export class MedicineService {
   constructor(private http : HttpClient) { }
 
   getMedicine() {
-    return this.http.get(`api/selectMedicine`).pipe(
+    return this.http.get(url).pipe(
       map((res : any) => {
         return res;
       })

@@ -1,1 +1,6 @@
-<p>medicine works!</p>
+<div id="theList">
+    <h2>Medicine list</h2>
+    <ul>
+        <li *ngFor="let item of medicine">{{item.name}} | {{item.type}} | {{item.type}} | {{item?.seller}}</li>
+    </ul>
+</div>
