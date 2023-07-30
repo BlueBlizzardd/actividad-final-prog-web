@@ -1,5 +1,6 @@
 export interface Medicine {
-    id: number,
+    id?: number,
+    amount: number,
     name: string,
     type: string,
     expDate: Date,

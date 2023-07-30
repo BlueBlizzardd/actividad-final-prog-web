@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 
-let url : string = 'http://localhost:80/api/selectBatch';
+let url : string = 'http://localhost:80/api/getBatch';
 
 @Injectable({
   providedIn: 'root'
