@@ -10,7 +10,7 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { AddMedicineComponent } from './add-medicine/add-medicine.component';
 import { AddInventoryComponent } from './add-inventory/add-inventory.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
