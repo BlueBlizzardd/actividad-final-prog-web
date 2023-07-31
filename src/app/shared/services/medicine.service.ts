@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 
-let url : string = 'http://localhost:80/api/getMedicine';
+let url : string = 'https://actividad1progweb.000webhostapp.com/api/getMedicine';
 
 @Injectable({
   providedIn: 'root'

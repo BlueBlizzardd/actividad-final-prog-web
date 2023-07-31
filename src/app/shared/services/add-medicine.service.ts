@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { Medicine } from 'src/app/types';
 
-const getMedType : string = 'http://localhost:80/api/getMedicineType';
-const getMedNames : string = 'http://localhost:80/api/getMedNames';
-const postReq : string = 'http://localhost:80/api/postMedicine';
+const getMedType : string = 'https://actividad1progweb.000webhostapp.com/api/getMedicineType';
+const getMedNames : string = 'https://actividad1progweb.000webhostapp.com/api/getMedNames';
+const postReq : string = 'https://actividad1progweb.000webhostapp.com/api/postMedicine';
 
 @Injectable({
   providedIn: 'root'

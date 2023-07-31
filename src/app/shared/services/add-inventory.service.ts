@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { Batch } from 'src/app/types';
 
-const getProv : string = 'http://localhost:80/api/getProviders';
-const getEmp : string = 'http://localhost:80/api/getEmployees';
-const postBatch : string = 'http://localhost:80/api/postBatch';
+const getProv : string = 'https://actividad1progweb.000webhostapp.com/api/getProviders';
+const getEmp : string = 'https://actividad1progweb.000webhostapp.com/api/getEmployees';
+const postBatch : string = 'https://actividad1progweb.000webhostapp.com/api/postBatch';
 
 @Injectable({
   providedIn: 'root'
