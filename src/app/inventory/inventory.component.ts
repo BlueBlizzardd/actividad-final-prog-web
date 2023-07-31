@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Batch } from '../types';
-import { InventoryService } from './services/inventory.service';
+import { InventoryService } from '../shared/services/inventory.service';
 
 @Component({
   selector: 'app-inventory',

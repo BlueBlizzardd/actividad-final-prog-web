@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Batch } from '../types';
-import { AddInventoryService } from './services/add-inventory.service';
-import { AddMedicineService } from '../add-medicine/services/add-medicine.service';
+import { AddInventoryService } from '../shared/services/add-inventory.service';
+import { AddMedicineService } from '../shared/services/add-medicine.service';
 import { NgForm } from '@angular/forms';
 
 @Component({

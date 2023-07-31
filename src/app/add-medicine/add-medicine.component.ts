@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Medicine } from '../types';
-import { AddMedicineService } from './services/add-medicine.service';
+import { AddMedicineService } from '../shared/services/add-medicine.service';
 import { NgForm } from '@angular/forms';
 
 @Component({
