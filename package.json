@@ -23,6 +23,7 @@
     "bootstrap": "^5.2.3",
     "chart.js": "^4.3.2",
     "chartjs-adapter-moment": "^1.0.1",
+    "jspdf": "^2.5.1",
     "moment": "^2.29.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

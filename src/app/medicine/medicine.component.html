@@ -1,7 +1,22 @@
 <div id="medList">
     <h2>Medicine list</h2>
-    <ul>
-        <li *ngFor="let item of medicine">{{item.name}} | {{item.amount}} | {{item.type}} | {{item.expDate}} |
-            {{item?.seller}}</li>
-    </ul>
+    <div class="col-md-8" id="htmlData">
+        <table class="table table-bordered">
+            <tr class="table-primary">
+                <th>Medicine Name</th>
+                <th>Amount</th>
+                <th>Medicine Type</th>
+                <th>Expiration Date</th>
+                <th>Seller</th>
+            </tr>
+            <tr *ngFor="let med of medicine">
+                <th>{{med.name}}</th>
+                <td>{{med.amount}}</td>
+                <td>{{med.type}}</td>
+                <td>{{med.expDate}}</td>
+                <td>{{med?.seller}}</td>
+            </tr>
+        </table>
+    </div>
+    <button type="button" class="btn btn-primary mx-auto" (click)="print()">Print as PDF</button>
 </div>

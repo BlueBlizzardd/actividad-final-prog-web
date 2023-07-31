@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Medicine } from '../types';
 import { MedicineService } from '../shared/services/medicine.service';
+import { PrintingService } from '../shared/services/printing.service';
 
 @Component({
   selector: 'app-medicine',
@@ -13,7 +14,7 @@ export class MedicineComponent implements OnInit {
   medicine : Medicine[] = [];
   status : string = '';
 
-  constructor(private medicineService : MedicineService) { };
+  constructor(private medicineService : MedicineService, private printingService : PrintingService) { };
   
   ngOnInit() {
     this.getMedicine();
@@ -23,14 +24,12 @@ export class MedicineComponent implements OnInit {
     this.medicineService.getMedicine().subscribe(
       (data: Medicine[]) => {
         this.medicine = data;
-        this.status = 'successful retrieval of the list';
-        console.log(this.status);
-      },
-      (err) => {
-        this.status = err;
-        console.log(err);
       }
     );
   }
   
+  print(): void {
+    const data : any = document.getElementById('htmlData');
+    this.printingService.pdf(data);
+  }
 }

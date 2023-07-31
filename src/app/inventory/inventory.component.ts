@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Batch } from '../types';
 import { InventoryService } from '../shared/services/inventory.service';
+import { PrintingService } from '../shared/services/printing.service';
 import Chart from 'chart.js/auto';
 import 'chartjs-adapter-moment';
 
@@ -8,14 +9,14 @@ import 'chartjs-adapter-moment';
   selector: 'app-inventory',
   templateUrl: './inventory.component.html',
   styleUrls: ['./inventory.component.css'],
-  providers: [InventoryService]
+  providers: [InventoryService, PrintingService]
 })
 export class InventoryComponent implements OnInit {
   batches : Batch[] = []; 
   chart : any;
   status : string = '';
 
-  constructor(private inventoryService : InventoryService) { };
+  constructor(private inventoryService : InventoryService, private printingService : PrintingService) { };
   
   ngOnInit() {
     this.getBatches();
@@ -60,5 +61,10 @@ export class InventoryComponent implements OnInit {
       }
     );
   };
+
+  print() : void {
+    let data: any = document.getElementById('htmlData');
+    this.printingService.pdf(data);
+  }
 
 }

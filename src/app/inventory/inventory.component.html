@@ -1,12 +1,27 @@
 <div id="invList">
     <h2>Batch list</h2>
-    <ul>
-        <li *ngFor="let item of batches">{{item.id}} | {{item.receiptNum}} | {{item.batchDate | date: 'long'}} |
-            {{item.medicine}} |
-            {{item.amount}} | {{item.provider}} | {{item.employee}}
-        </li>
-    </ul>
-    <div class="chart-container">
-        <canvas id="batchChart">{{chart}}</canvas>
+    <div class="col-md-8" id="htmlData">
+        <table class="table table-bordered">
+            <tr class="table-primary">
+                <th>Receipt Number</th>
+                <th>Batch Date</th>
+                <th>Medicine Received</th>
+                <th>Amount Received</th>
+                <th>Provider</th>
+                <th>Employee in Charge</th>
+            </tr>
+            <tr *ngFor="let batch of batches">
+                <th>{{batch.receiptNum}}</th>
+                <td>{{batch.batchDate}}</td>
+                <td>{{batch.medicine}}</td>
+                <td>{{batch.amount}}</td>
+                <td>{{batch.provider}}</td>
+                <td>{{batch.employee}}</td>
+            </tr>
+        </table>
+    </div>
+    <button type="button" class="btn btn-primary mx-auto" (click)="print()">Print as PDF</button>
+    <div>
+        <canvas id="batchChart"></canvas>
     </div>
 </div>
