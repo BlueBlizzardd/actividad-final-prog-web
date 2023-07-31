@@ -1,3 +1,8 @@
 <app-navbar></app-navbar>
 
+<qrcode (qrCodeURL)="onChangeURL($event)" [qrdata]="myAngularxQrCode" [width]="256" [errorCorrectionLevel]="'M'">
+</qrcode>
+<a [href]="qrCodeDownloadLink" download="qrcode"
+    class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Download</a>
+
 <router-outlet></router-outlet>
