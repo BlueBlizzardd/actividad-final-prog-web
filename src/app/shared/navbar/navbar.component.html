@@ -1,22 +1,24 @@
 <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand">
+        <a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page" class="navbar-brand">
             <img src="../../assets/Farmacia_SAAS_logo.svg" alt="Saas_SVG">
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a routerLink="/inventory" routerLinkActive="active" ariaCurrentWhenActive="page">Batches</a>
+            <ul ngbNav #nav="ngbNav" class="me-auto mb-2 mb-lg-0">
+                <li ngbNavItem>
+                    <a ngbNavLink routerLink="/inventory" routerLinkActive="active"
+                        ariaCurrentWhenActive="page">Batches</a>
                 </li>
-                <li class="nav-item">
-                    <a routerLink="/medicine" routerLinkActive="active" ariaCurrentWhenActive="page">Medicine</a>
+                <li ngbNavItem>
+                    <a ngbNavLink routerLink="/medicine" routerLinkActive="active"
+                        ariaCurrentWhenActive="page">Medicine</a>
                 </li>
-                <li class="nav-item">
-                    <a routerLink="/add-medicine" routerLinkActive="active" ariaCurrentWhenActive="page">Add
+                <li ngbNavItem>
+                    <a ngbNavLink routerLink="/add-medicine" routerLinkActive="active" ariaCurrentWhenActive="page">Add
                         Medicine</a>
                 </li>
-                <li class="nav-item">
-                    <a routerLink="/add-inventory" routerLinkActive="active" ariaCurrentWhenActive="page">Add
+                <li ngbNavItem>
+                    <a ngbNavLink routerLink="/add-inventory" routerLinkActive="active" ariaCurrentWhenActive="page">Add
                         Batch</a>
                 </li>
             </ul>
