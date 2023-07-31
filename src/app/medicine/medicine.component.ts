@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Medicine } from '../types';
-import { MedicineService } from './services/medicine.service';
+import { MedicineService } from '../shared/services/medicine.service';
 
 @Component({
   selector: 'app-medicine',
