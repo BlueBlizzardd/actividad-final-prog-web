@@ -25,10 +25,6 @@ export class InventoryComponent implements OnInit {
         this.status = 'successful retrieval of the list';
         console.log(this.status);
         console.log(this.batches);
-      },
-      (err) => {
-        this.status = err;
-        console.log(err);
       }
     );
   };

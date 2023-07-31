@@ -1,7 +1,8 @@
 <div id="invList">
     <h2>Batch list</h2>
     <ul>
-        <li *ngFor="let item of batches">{{item.id}} | {{item.receiptNum}} | {{item.batchDate}} | {{item.medicine}} |
+        <li *ngFor="let item of batches">{{item.id}} | {{item.receiptNum}} | {{item.batchDate | date: 'long'}} |
+            {{item.medicine}} |
             {{item.amount}} | {{item.provider}} | {{item.employee}}
         </li>
     </ul>

@@ -3,32 +3,40 @@
     <form #batchForm="ngForm" (ngSubmit)="submit(batchForm)">
         <div class="form-group">
             <label for="receiptNum">Receipt Number</label>
-            <input type="number" id="receiptNum" class="form-control" [(ngModel)]="batch.receiptNum"
+            <input type="number" name="receiptNum" id="receiptNum" class="form-control" [(ngModel)]="batch.receiptNum"
                 #receiptNum="ngModel">
         </div>
         <div class="form-group">
             <label for="batchDate">Batch Date</label>
-            <input type="date" id="batchDate" class="form-control" [(ngModel)]="batch.batchDate" #batchDate="ngModel">
+            <input type="date" name="batchDate" id="batchDate" class="form-control" [(ngModel)]="batch.batchDate"
+                #batchDate="ngModel">
         </div>
         <div class="form-group">
             <label for="medicine">Medicine Name</label>
-            <input type="text" id="medicine" class="form-control" [(ngModel)]="batch.medicine" #batchMedicine="ngModel">
+            <select id="medicine" name="medicine" class="form-control" [(ngModel)]="batch.medicine"
+                #batchMedicine="ngModel">
+                <option *ngFor="let name of medicines" [value]="name">{{name}}</option>
+            </select>
         </div>
         <div class="form-group">
             <label for="amount">Medicine Amount</label>
-            <input type="number" id="amount" class="form-control" [(ngModel)]="batch.amount" #batchAmount="ngModel">
+            <input type="number" id="amount" name="amount" class="form-control" [(ngModel)]="batch.amount"
+                #batchAmount="ngModel">
         </div>
         <div class="form-group">
             <label for="provider">Provider</label>
-            <select id="provider" [(ngModel)]="batch.provider" #batchProvider="ngModel">
+            <select id="provider" name="provider" class="form-control" [(ngModel)]="batch.provider"
+                #batchProvider="ngModel">
                 <option *ngFor="let provider of providers" [value]="provider">{{provider}}</option>
             </select>
         </div>
         <div class="form-group">
             <label for="employee">Employee</label>
-            <select id="employee" [(ngModel)]="batch.employee" #batchEmployee="ngModel">
+            <select id="employee" name="employee" class="form-control" [(ngModel)]="batch.employee"
+                #batchEmployee="ngModel">
                 <option *ngFor="let employee of employees" [value]="employee">{{employee}}</option>
             </select>
         </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
     </form>
 </div>

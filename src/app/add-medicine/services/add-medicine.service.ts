@@ -3,8 +3,9 @@ import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { Medicine } from 'src/app/types';
 
-let getReq : string = 'http://localhost:80/api/getMedicineType';
-let postReq : string = 'http://localhost:80/api/postMedicine';
+const getMedType : string = 'http://localhost:80/api/getMedicineType';
+const getMedNames : string = 'http://localhost:80/api/getMedNames';
+const postReq : string = 'http://localhost:80/api/postMedicine';
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +15,16 @@ export class AddMedicineService {
   constructor(private http : HttpClient) { }
 
   getTypes() : Observable<string[]> {
-    return this.http.get<string[]>(getReq).pipe(
+    return this.http.get<string[]>(getMedType).pipe(
       map((res : any) => {
         return res;
       })
+    );
+  }
+
+  getNames() : Observable<string[]> {
+    return this.http.get<string[]>(getMedNames).pipe(
+      map((res : any) => res)
     );
   }
 
