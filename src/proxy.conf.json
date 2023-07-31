@@ -1,6 +1,6 @@
 {
     "/api": {
-      "target": "http://localhost:80",
+      "target": "https://actividad1progweb.000webhostapp.com",
       "secure": false
     }
   }
