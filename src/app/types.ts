@@ -8,7 +8,7 @@ export interface Medicine {
 }
 
 export interface Batch {
-    id: number,
+    id?: number,
     receiptNum: number,
     batchDate: Date,
     medicine: string,
